@@ -13,4 +13,7 @@ Testing code:
 
 ```python
 print('testing testing 123')
+
+def my_function():
+    pass
 ```
