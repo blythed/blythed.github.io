@@ -11,9 +11,9 @@ $$E=mc^2$$
 
 Testing code:
 
-{ % highlight python % }
+{% highlight python %}
 print('testing testing 123')
 
 def my_function():
     pass
-{ % endhighlight % }
+{% endhighlight %}
