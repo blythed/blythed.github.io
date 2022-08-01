@@ -9,7 +9,7 @@ an M.Sc in Computational Neuroscience and Machine Learning from the Technical Un
 
 ### Projects
 
--
+- ...
 
 ### Contact me
 
