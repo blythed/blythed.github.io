@@ -10,7 +10,7 @@ Now using MathJax!
 $$E=mc^2$$
 
 Testing code:
-{% highlight python %}
-print('testing testing 123')
-{% endhighlight %}
 
+```python
+print('testing testing 123')
+```
