@@ -1,6 +1,6 @@
 ---
 layout: post
-usemathjax: true
+use_math: true
 title: Coming soon!
 ---
 
