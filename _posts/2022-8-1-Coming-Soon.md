@@ -1,6 +1,5 @@
 ---
 layout: post
-use_math: true
 title: Coming soon!
 ---
 
@@ -15,5 +14,5 @@ Testing `code`:
 print('testing testing 123')
 
 def my_function():
-pass
+    pass
 ```
