@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I'm an AI researcher, entrepreneur and architect based in Berlin Germany. I've published extensively on the topic of [machine learning and AI](https://scholar.google.com/citations?user=-H7cJ8wAAAAJ&hl=en&oi=ao), including some of the [most widely cited work](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-H7cJ8wAAAAJ&citation_for_view=-H7cJ8wAAAAJ:WF5omc3nYNoC) in natural language processing of the last few years, made major initial contributions to the open source package [Flair](https://github.com/flairNLP/flair) (now over 10,000 stars), was an initial driving force behind Zalando's [AI ramp up and NLP strategy](https://corporate.zalando.com/en/company/research-zalando), founded, bootstrapped a 2-man startup [LF1](https://lf1.io/) to 7-figure revenue within 1.5 years, and exited the deep-learning powered e-commerce search suite [Aleph-Search](https://www.alephsearch.com/) to the market leader in e-commerce search and navigation, [Attraqt Group PLC](https://www.attraqt.com/). 
+I'm an AI researcher, entrepreneur and architect based in Berlin Germany. I've published extensively on the topic of [machine learning and AI](https://scholar.google.com/citations?user=-H7cJ8wAAAAJ&hl=en&oi=ao), including some of the [most widely cited work](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-H7cJ8wAAAAJ&citation_for_view=-H7cJ8wAAAAJ:WF5omc3nYNoC) in natural language processing of the last few years, made major initial contributions to the open source package [Flair](https://github.com/flairNLP/flair) (now over 10,000 stars), was an initial driving force behind Zalando's [AI ramp up and NLP strategy](https://corporate.zalando.com/en/company/research-zalando), founded, bootstrapped a 2-man startup [LF1](https://lf1.io/) to 7-figure revenue within 1.5 years, and [exited](https://www.attraqt.com/resources/attraqt-acquires-ai-ip-assets-from-aleph-one/#:~:text=Thursday%20October%201%2C%202020%E2%80%A6,assets%20from%20Aleph%20One%20GmbH.) the deep-learning powered e-commerce search suite [Aleph-Search](https://www.alephsearch.com/) to the market leader in e-commerce search and navigation, [Attraqt Group PLC](https://www.attraqt.com/). 
 
-If you are interested in working with me on a speculative project involving AI, deep-learning, natural language processing, semantic information retrieval or related areas, then please reach out with a short description of your idea and why the project is important to your company or organization.
+If you are interested in working with me on a speculative project involving AI, deep-learning, natural language processing, semantic information retrieval or related areas, then please [reach out](#contact-me) with a short description of your idea and why the project is important to your company or organization.
 
 ### Education
 
@@ -37,17 +37,21 @@ If you are interested in working with me on a speculative project involving AI, 
 - Superdry
 - Waitrose
 
+![]({{ site.baseimg }}/images/alephsearch.png)
+
 Aleph Search comprises semantic search (search with "meaning"), similar product recommendation (search for similar "looking" products), reverse image-search (find a product using an uploaded image of worn fashion items), shop-the-look (find all items in an image containing multiple fashion items), auto-complete (suggest searches based on partial search) and product tagging (fill out missing, or additonal product information).
 
 #### Contextual string embeddings
 
-In a research project together with Alan Akbik and Roland Vollgraf, we demonstrated in the first paper of its kind, that pretraining a high quality language at the character level, leads to highly cost effective representations for named-entity recognition and similar sequence labelling tasks. Our analysis showed that character level language modelling combines the best of sub-word level granularity with meaningful semantic vectorial neighbourhoods for a number of downstream tasks. In languages such as German, which has a highly compositional structure from sub-word to word level, this leads to improvements over the SOTA of over 10%. The research paper was published and presented at COLING 2018, and made a major contribution to the proliferation of language model representations such as Bert, which form an integral part of e.g. the Google search algorithm.
+In a research project together with Alan Akbik and Roland Vollgraf, we demonstrated in [the first paper of its kind](https://aclanthology.org/C18-1139/?utm_campaign=piqcy&utm_medium=email&utm_source=Revue%20newsletter), that pretraining a high quality language at the character level, leads to highly cost effective representations for named-entity recognition and similar sequence labelling tasks. Our analysis showed that character level language modelling combines the best of sub-word level granularity with meaningful semantic vectorial neighbourhoods for a number of downstream tasks. In languages such as German, which has a highly compositional structure from sub-word to word level, this leads to improvements over the SOTA of over 10%. The research paper was published and presented at [COLING 2018](https://coling2018.org/), and made a major contribution to the proliferation of language model representations such as [Bert](https://en.wikipedia.org/wiki/BERT_(language_model), which form an integral part of e.g. the Google search algorithm.
 
 ![]({{ site.baseimg }}/images/neuralLMtagging.png)
 
 #### Flair
 
-I was an major initial contributor to the Flair library, an initiative of Alan Akbik at Zalando Research. Flair is a simple but effective library for core NLP tasks, making it straightforward to deploy and combine word level embeddings for a variety of tasks, including:
+![]({{ site.baseimg }}/images/flair.png){: width="80" }
+
+I was an initial contributor to the [Flair](https://github.com/flairNLP/flair) library, an initiative of [Alan Akbik](https://alanakbik.github.io/) (now Humboldt University) at Zalando Research. Flair is a simple but effective library for core NLP tasks, making it straightforward to deploy and combine word level embeddings for a variety of tasks, including:
 
 - named entity recognition (NER)
 - part-of-speech tagging (PoS)
@@ -56,11 +60,15 @@ I was an major initial contributor to the Flair library, an initiative of Alan A
 
 #### PADL
 
-Pipeline Abstractions for Deep Learning (PADL), codifies the approach we took to development at LF1. 
+[Pipeline Abstractions for Deep Learning (PADL)](https://padl.ai/), codifies the approach we took to development at LF1. 
+
+![]({{ site.baseimg }}/images/padl_schematic.png){: height="600" }
 
 #### Prediction and quantification of athletic performance
 
-Together with Franz Kiraly, I developed a new approach to predicting and quantifying athletic performance, based on a combinatorial matrix completion algorithm.
+Together with [Franz Kiraly](https://scholar.google.de/citations?user=VYi_04kAAAAJ&hl=de), I developed and [published a new approach](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157257) to predicting and quantifying athletic performance, based on a novel combinatorial-matrix completion algorithm.
+
+![]({{ site.baseimg }}/images/athletic_performance.png)
 
 ### Current interests
 
