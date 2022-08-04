@@ -88,6 +88,50 @@ At the moment I am interested in these things (among a great deal of other thing
 - Applications of deep-learning to Web3.
 - MLops, particularly as regards pipelines taking models from research and experimentation all the way through to production.
 
+## Technology stack
+
+- Python 2, 3
+- PyTorch
+- Tensorflow
+- Git
+- PostGreSQL
+- MongoDB
+- Flask
+- AWS
+  - EC2
+  - Cloudformation
+  - s3
+  - ...
+- Docker
+- Jenkins
+- Javascript
+- C/ C++
+
+## Machine learning stack
+
+- Classical machine learning
+  - Kernel methods
+  - Source separation
+  - Clustering
+  - Dimension reduction
+- Deep learning
+  - Convolution networks for vision (e.g. ResNet architectures)
+  - Deep ranking/ representation learning (e.g. Siamese network learning)
+  - Bounding box regression (e.g. Yolo architectures)
+  - Image segmentation (e.g. UNet)
+  - Language modelling (e.g. transformers and RNNs)
+  - Sequence-2-sequence learning (e.g. transformers and RNNs)
+  - Image generation with generative adversarial networks (e.g.StyleGAN+)
+
+## Useful links
+
+- [Google scholar profile](https://scholar.google.de/citations?user=-H7cJ8wAAAAJ&hl=en)
+- [GitHub profile](https://github.com/blythed)
+- [Medium profile](https://medium.com/@duncanblythe)
+- [LinkedIn profile](https://www.linkedin.com/in/duncan-blythe-71877312b/)
+- [LF1 website](https://lf1.io/)
+- [PADL project website](https://padl.ai/)
+
 ### Contact me
 
 [duncan (no-space) blythe (at) gmail (dot) com]()
