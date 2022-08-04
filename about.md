@@ -101,7 +101,8 @@ At the moment I am interested in these things (among a great deal of other thing
   - EC2
   - Cloudformation
   - s3
-  - ...
+  - IAM
+  - AutoScaling
 - Docker
 - Jenkins
 - Javascript
