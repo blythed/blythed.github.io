@@ -122,7 +122,7 @@ At the moment I am interested in these things (among a great deal of other thing
   - Image segmentation (e.g. UNet)
   - Language modelling (e.g. transformers and RNNs)
   - Sequence-2-sequence learning (e.g. transformers and RNNs)
-  - Image generation with generative adversarial networks (e.g.StyleGAN+)
+  - Image generation with generative adversarial networks (e.g. StyleGAN+)
 
 ## Useful links
 
