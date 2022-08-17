@@ -39,10 +39,10 @@ output = model.forward(batch)
 predictions = model.postprocess(output[0])
 ```
 
-For predictions over data points we would use a generic `torch.utils.data.DataSet`:
+For predictions over data points we would use a generic `torch.utils.data.Dataset`:
 
 ```python
-class DataSetWrapper(torch.utils.data.DataSet):
+class DatasetWrapper(torch.utils.data.Dataset):
 
     def __init__(self, model, datapoints):
         self.model = model
