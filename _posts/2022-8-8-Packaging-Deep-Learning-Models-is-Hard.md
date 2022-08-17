@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Packaging Deep Learning Models is Hard
+title: Packaging deep learning models is hard
 ---
 
 After you've diligently trained and re-trained your deep neural network and performed model selection over a grid of hyperparameters, as a data-scientist or researcher, your feeling is generally "great now I'm done!". 
