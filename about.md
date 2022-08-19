@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm an AI researcher, AI architect, and entrepreneur. I've published extensively on the topic of [machine learning and AI](https://scholar.google.com/citations?user=-H7cJ8wAAAAJ&hl=en&oi=ao), including some of the [most widely cited work](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-H7cJ8wAAAAJ&citation_for_view=-H7cJ8wAAAAJ:WF5omc3nYNoC) in natural language processing of the last few years, made major initial contributions to the open source package [Flair](https://github.com/flairNLP/flair) (now over 10,000 stars), was a driving force behind Zalando's [AI ramp up and NLP strategy](https://corporate.zalando.com/en/company/research-zalando), bootstrapped a 2-man startup [LF1](https://lf1.io/) to 7-figure revenue within 1.5 years, and [exited](https://www.attraqt.com/resources/attraqt-acquires-ai-ip-assets-from-aleph-one/#:~:text=Thursday%20October%201%2C%202020%E2%80%A6,assets%20from%20Aleph%20One%20GmbH.) the deep-learning powered e-commerce search suite [Aleph-Search](https://www.alephsearch.com/) to the market leader in e-commerce search and navigation, [Attraqt Group PLC](https://www.attraqt.com/). 
+I'm an AI researcher, architect, and entrepreneur. I've published extensively on the topic of [machine learning and AI](https://scholar.google.com/citations?user=-H7cJ8wAAAAJ&hl=en&oi=ao), including some of the [most widely cited work](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-H7cJ8wAAAAJ&citation_for_view=-H7cJ8wAAAAJ:WF5omc3nYNoC) in natural language processing of the last few years, made major initial contributions to the open source package [Flair](https://github.com/flairNLP/flair) (now over 10,000 stars), was a driving force behind Zalando's [AI ramp up and NLP strategy](https://corporate.zalando.com/en/company/research-zalando), bootstrapped a 2-man startup [LF1](https://lf1.io/) to 7-figure revenue within 1.5 years, and [exited](https://www.attraqt.com/resources/attraqt-acquires-ai-ip-assets-from-aleph-one/#:~:text=Thursday%20October%201%2C%202020%E2%80%A6,assets%20from%20Aleph%20One%20GmbH.) the deep-learning powered e-commerce search suite [Aleph-Search](https://www.alephsearch.com/) to the market leader in e-commerce search and navigation, [Attraqt Group PLC](https://www.attraqt.com/). 
 
 If you are interested in working with me on a speculative project involving AI, deep-learning, natural language processing, semantic information retrieval or related areas, then please [reach out](#contact-me) with a short description of your idea and why the project is important to your company or organization.
 
@@ -21,6 +21,10 @@ If you are interested in working with me on a speculative project involving AI, 
 - Research scientist at [Zalando Research](https://corporate.zalando.com/en/company/research-zalando) in natural language and deep learning sub-group (2017-2018)
 - Co-founder and CEO of [LF1](https://lf1.io/) as 33% equal share-holder (2019-)
 - [Independent AI researcher, entrepreneur and architect](https://blythed.github.io/) (2022-)
+
+### Publications
+
+See my [google scholar profile](https://scholar.google.de/citations?user=-H7cJ8wAAAAJ&hl=en) for an up-to-date record.
 
 ### Projects
 
