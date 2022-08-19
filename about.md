@@ -69,6 +69,12 @@ I was an initial contributor to the [Flair](https://github.com/flairNLP/flair) l
 - sense disambiguation
 - sentence level classification
 
+### Sheen AI
+
+I am technical advisor and co-developer of a recently launched venture [Sheen AI](https://www.sheen-ai.com/). Sheen is a technology which transforms sound into visual art in real-time using AI, creating audio-reactive visuals as immersive, multi-sensory experiences. 
+
+![]({{ site.baseimg }}/images/sheen.png){: height="600" }
+
 #### PADL
 
 [Pipeline Abstractions for Deep Learning (PADL)](https://padl.ai/), codifies the approach we took to development at LF1 and is a project I initiated together with colleague and [LF1](https://lf1.io/) co-founder [Alexander Schlegel](https://www.linkedin.com/in/alexander-schlegel-32372aa9/?originalSubdomain=de).
