@@ -1,0 +1,229 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubhi Rani
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{cite}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Duncan Blythe}} & Email : \href{mailto:duncanblythe@gmail.com}{duncanblythe@gmail.com}\\
+  \href{https://www.linkedin.com/in/duncan-blythe-71877312b/}{Linkedin: https://www.linkedin.com/in/duncan-blythe-71877312b/} & Mobile : +4915256271223 \\
+  \href{https://github.com/blythed}{Github: https://github.com/blythed} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Oxford University}{Oxford, United Kingdom}
+      {MMathPhil in Mathematics and Philosophy; 1st class; 1st in graduating class}{2003 - 2007}
+
+	   {\scriptsize \textit{Courses: abstract algebra, analytic topology, axiomatic set theory, Gödel's theorems, model theory}}
+
+    \resumeSubheading
+      {Berlin Institute of Technology}{Berlin, Germany}
+      {MSc Computational Neuroscience;  Thesis: 1,0 (excellent)}{2009 - 2011}
+
+	   {\scriptsize \textit{Courses: Machine learning, scientific programming, models of higher brain function and neural systems, analysis of neural data}}
+
+    \resumeSubheading
+      {Berlin Institute of Technology}{Berlin, Germany}
+      {PhD Computer Science;  Summa cum Laude}{2011 - 2015}
+
+	   {\scriptsize \textit{Thesis: `Long-range analysis of EEG data'}}
+  \resumeSubHeadingListEnd
+
+%----------PRIZES AND AWARDS-----------------
+
+\section{Prizes and Awards}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Gibbs Prize in Mathematics}{Oxford University, United Kingdom}
+      {Best performance in part B examinations}{July 2006}
+
+    \resumeSubheading
+      {Gibbs Prize in Mathematics (again)}{Oxford University, United Kingdom}
+      {Best performance in part C examinations}{July 2007}
+
+    \resumeSubheading
+      {Academic Scholarship}{Mansfield College, Oxford University, United Kingdom}
+      {Consistently excellent academic performance}{2004-2007}
+
+    \resumeSubheading
+      {Michael Foster Scholarship}{Deutsche Akademische Austausch Dienst (DAAD)}
+      {1 year fully funded study in Germany}{2007-2008}
+
+    \resumeSubheading
+      {Scholarship in GRK `Sensory computation in neural systems'}{Deutsche Forschungs Gemeinschaft (DFG)}
+      {Fully funded PhD research for 3 years}{2012-2015}
+
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{AI}{Deep learning, NLP, computer vision}
+	\resumeSubItem{Machine Learning}{Kernel methods, source separation, time-series analysis and forecasting, dimension reduction}
+	\resumeSubItem{Architectures}{Convolutional networks, recurrent networks, transformers, sequence-2-sequence, UNets, bounding-box regression}
+	\resumeSubItem{Languages}{Python, MATLAB, Javascript, C}
+	\resumeSubItem{Scientific computing}{PyTorch, Tensorflow, Scikit-Learn, Numpy, Scipy}
+	\resumeSubItem{Full Stack}{Git, MongoDB, SQL, Flask, React, Redis, RQ}
+	\resumeSubItem{Infrastructure}{AWS (EC2, s3, CloudFormation, IAM, ECS), Docker, Jenkins, Kibana}
+	\resumeSubItem{Project management}{Scrum, Kanban, Jira, GitHub Projects, Trello}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Employment}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {\href{https://lf1.io/}{LF1 GmbH}}{Berlin, Germany}
+    {CEO and co-founder}{2019 - present}
+    \begin{itemize}
+    \item Developed an end-to-end deep learning based search and navigation system `\href{https://www.alephsearch.com/}{Aleph Search}' for e-Commerce
+    \item System comprised text-search, similar product recommendation, reverse image search,
+    shop-the-look, tagging
+    \item System was acquired by Attraqt PLC in 2020 in an IP-transfer share deal
+    \item System is now in production at the top e-Commerce websites in Europe, including, Adidas, Asos, Waitrose, Screwfix
+    \item Was highly involved in the integration process of the live system
+    \item Provided technical direction and managed team of 5 researchers and developers
+    \item Created the open source project PADL "pipeline abstractions for deep learning"
+    \item Prototyped a novel interactive system for converting audio into video "Sheen AI"
+    \end{itemize}
+
+    \resumeSubheading
+    {\href{https://corporate.zalando.com/en/company/research-zalando}{Zalando Research}}{Berlin, Germany}
+    {Research scientist, AI and machine learning}{2017 - 2018}
+    \begin{itemize}
+    \item Research on language modelling, natural language processing and multi-modal deep learning
+    \item Prototyped an deep-learning powered search algorithm for fashion
+    \item Published extensively on NLP, receiving 1000s of citations
+    \end{itemize}
+
+    \resumeSubheading
+    {\href{https://www.dzne.de/forschung/forschungsbereiche/populationsforschung/forschungsgruppen/mukherjee/forschungsschwerpunkte/}{German Centre for Neurodegenerative Disease (Helmholtz Network)}}{Bonn, Germany}
+    {Postdoctoral researcher in Machine Learning and Statistics Group}{2016-2017}
+    \begin{itemize}
+    \item Research on semi-supervised learning for causal inference
+    \end{itemize}
+
+    \resumeSubheading
+    {\href{https://nexteinstein.org/}{African Institute of Mathematics}}{Bagamoyo, Tanzania}
+    {Tutor for applied mathematics}{2015 - 2016}
+    \begin{itemize}
+    \item Tutoring for lectures for best students from across Africa
+    \item Supervision of 6 master's projects
+    \item Assisting students in scientific computing
+    \end{itemize}
+
+    \resumeSubheading
+    {\href{https://www.ml.tu-berlin.de/menue/machine_learning/}{Machine Learning Group, Berlin Institute of Technology}}{Berlin, Germany}
+    {Researcher}{2011 - 2012}
+    \begin{itemize}
+    \item Applications of source separation techniques to primate LFP data
+    \item Publication of novel source separation methodology
+    \end{itemize}
+
+    \resumeSubheading
+    {\href{https://www.ml.tu-berlin.de/menue/machine_learning/}{Machine Learning Group, Berlin Institute of Technology}}{Berlin, Germany}
+    {Research Assistant}{2010 - 2011}
+    \begin{itemize}
+    \item Implementations of source separation and temporal segmentation in MATLAB
+    \item Job management on sungrid HPC cluster
+    \item Technical proofreading
+    \item Contributed to original research on source separation and machine learning
+    \end{itemize}
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Open Source Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{\href{https://github.com/flairNLP/flair}{FlairNLP}}
+{A very simple framework for state-of-the-art NLP. Currently more than 12000 stars on GitHub.}
+\resumeSubItem{\href{https://padl.ai/}{Pipeline abstractions for deep learning (PADL)}}
+{Fills a void in the PyTorch ecosystem, which has many tools for training models, but few for day-to-day operations and use of models.}
+\resumeSubHeadingListEnd
+
+\nocite{*}
+\renewcommand\refname{Selected Publications}
+\bibliography{cv}{}
+\bibliographystyle{plain}
+
+\end{document}

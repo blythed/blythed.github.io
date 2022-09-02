@@ -8,6 +8,8 @@ I'm an AI researcher, architect, and entrepreneur. I've published extensively on
 
 If you are interested in working with me on a speculative project involving AI, deep-learning, natural language processing, semantic information retrieval or related areas, then please [reach out](#contact-me) with a short description of your idea and why the project is important to your company or organization. I'm potentially interested in full-time lead-research/ data-science roles which fit [my interests](#current-interests), so drop me a line if you think you've got a good fit.
 
+Here's an [up-to date traditional resume]({{ site.url }}/assets/cv.pdf).
+
 ### Education
 
 - *M.Math.Phil* (1st class) in Mathematics and Philosophy from [Oxford University, UK](https://www.ox.ac.uk/) in 2007

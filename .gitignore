@@ -10,3 +10,9 @@ node_modules
 package.json
 .idea
 .jekyll-cache
+cv/cv.out
+cv/cv.bbl
+cv/cv.blg
+cv/cv.log
+cv/cv.aux
+cv/cv.pdf
