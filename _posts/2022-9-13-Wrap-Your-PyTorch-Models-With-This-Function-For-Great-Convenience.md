@@ -31,7 +31,7 @@ We get this output:
 [{'a': {'b': tensor([1, 1])}, 'c': tensor([2, 2])}, tensor([[0, 0], [0, 0]])]
 ```
 
-You can see that the `DataLoader` class drilling down into the "leaf" nodes of the individual data points, and batching at the level of those leaves. This works, provided the tree structure of the input is the same for all data points in the batch. This is rather convenient, since the nested structure of the datapoints may facilitate modular models, which operate at different levels of this tree structure.
+You can see the `DataLoader` class drilling down into the "leaf" nodes of the individual data points, and batching at the level of those leaves. This works, provided the tree structure of the input is the same for all data points in the batch. This is rather convenient, since the nested structure of the datapoints may facilitate modular models, which operate at different levels of this tree structure.
 
 For example we might have a model with preprocessing, forward pass and postprocessing, which looks something like this:
 
