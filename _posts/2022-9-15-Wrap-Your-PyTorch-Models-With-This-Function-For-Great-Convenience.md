@@ -53,7 +53,7 @@ class Main(torch.nn.Module):
                 'a': {'b': self.dictionary[arg[0]['a']['b']]},
                 'c': self.dictionary[arg[0]['c']]
             },
-            [self.dictionary[x] for x in arg[1]]
+            torch.tensor([self.dictionary[x] for x in arg[1]])
         ]
 
     def forward(self, args):
@@ -249,7 +249,7 @@ Putting everything together we can get end-2-end model outputs using a simple ca
 ```
 >>> apply_model(
 ...    model, 
-...    ({'a': {'b': 'orange'}, 'c': 'pear'}, ('apple', 'apple'))),
+...    ({'a': {'b': 'orange'}, 'c': 'pear'}, ('apple', 'apple')),
 ...    single=True
 ... )
 {'score': tensor(-3.9864), 'decision': tensor(False)}
@@ -275,6 +275,10 @@ We can easily switch to batches by toggling `single` off:
  {'score': tensor(4.9929), 'decision': tensor(True)}]
 ```
 
-Writing models with this type of modular design pattern can lead to a clearer separation of concerns, enforce better practices in management of experimentation, and encourage deep learning developers to write code in a modular and predictable fashion.
+Writing models with this type of modular design pattern can lead to a clearer separation of concerns, enforce better practices in management of experimentation, and encourage deep learning developers to write code in a modular and predictable fashion. You can use this function by installing `pip install torchapply`. The source code is [here](https://github.com/blythed/torchapply).
+
+```python
+from torchapply import apply_model
+```
 
 Equipped with this design pattern, next time we're going to look at how to serialize the whole object in a way which streamlines downstream MLops.
