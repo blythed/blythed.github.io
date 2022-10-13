@@ -132,7 +132,7 @@ Suppose, for instance, that we change the indexing in the `forward` method of `M
 ```python
 def forward(self, args):
     output = self.layer(args)[:, -20, :]
-  	return output
+    return output
 ```
 
 Now let's try reloading the model and testing it as above. We get this error message:
