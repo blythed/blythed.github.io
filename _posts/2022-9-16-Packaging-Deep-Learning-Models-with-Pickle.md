@@ -131,7 +131,7 @@ Suppose, for instance, that we change the indexing in the `forward` method of `M
 
 ```python
 def forward(self, args):
-		output = self.layer(args)[:, -20, :]
+    output = self.layer(args)[:, -20, :]
   	return output
 ```
 
