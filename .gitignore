@@ -16,3 +16,7 @@ cv/cv.blg
 cv/cv.log
 cv/cv.aux
 cv/cv.pdf
+*.pkl
+*.dill
+*.pyc
+__pycache__

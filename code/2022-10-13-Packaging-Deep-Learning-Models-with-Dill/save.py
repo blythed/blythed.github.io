@@ -1,6 +1,6 @@
 from package import *
 from torchapply import apply_model
-import pickle
+import dill
 
 
 i = MyTokenizer()
@@ -11,6 +11,5 @@ c = MyCompoundClass(i, l_, out)
 c.eval()
 
 print(apply_model(c, 'lorem ipsum'))
-print(apply_model(c, ['lorem ipsum', 'lorem ipsum'], single=False, batch_size=2))
-with open('model.pkl', 'wb') as f:
-    pickle.dump(c, f)
+with open('model.dill', 'wb') as f:
+    dill.dump(c, f, byref=False, recurse=True)

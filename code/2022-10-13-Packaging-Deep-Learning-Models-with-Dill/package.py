@@ -18,6 +18,7 @@ class MyTokenizer:
         self.tokenizer =  sentencepiece.SentencePieceProcessor(model_proto=self.model.getvalue())
 
     def __call__(self, x):
+        # print('testing tokenizer!')
         return self.tokenizer.encode(x)
 
 
@@ -55,7 +56,24 @@ class MyCompoundClass(torch.nn.Module):
 
     def forward(self, args):
         output = self.layer(args)[:, -1, :]
+        print('testing testing 123')
         return self.function(output)
 
     def postprocess(self, x):
         return self.decoder(x)
+
+
+if __name__ == '__main__':
+    from torchapply import apply_model
+    import dill
+
+    i = MyTokenizer()
+    i.calibrate('corpus.txt')
+    l_ = MyLayer(i.tokenizer.get_piece_size(), 3)
+    out = MyReader(['good', 'bad', 'ugly'])
+    c = MyCompoundClass(i, l_, out)
+    c.eval()
+
+    print(apply_model(c, 'lorem ipsum'))
+    with open('model.dill', 'wb') as f:
+        dill.dump(c, f, byref=False, recurse=True)
