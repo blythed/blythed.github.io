@@ -85,7 +85,7 @@ c = MyCompoundClass(i, l_, out)
 
 We saw that with `pickle` a major drawback is that the *source* code is not serialized together with the object data. In many applications, we may want a stable and secure store of models generated in past experiments, including the exact methods and routines which went into those experiments. Often times, source code may change between experiments, in order to cater to the insights developed in previous experiments. `dill` may be used to get around this drawback, by enabling objects, including source code, to be dumped along with the object data. How exactly to use `dill` to do this, however, is not exactly straightforward, and I found the [documentation]() not exactly enlightening on this topic. The [GitHub page](https://github.com/uqfoundation/dill) mentions front and centrally, that `dill` provides the capability to "save and extract the source code from functions and classes". However there seem to be no clear examples of usage in the documentation or GitHub for this use case. For this reason it took me a bit of playing around to apply `dill` for this case.
 
-Here is how it's possible to get `dill` to save the source code of a model, together with the data. Further down in `package.py`, we write this:
+According to the docs, here is how it's possible to get `dill` to save the source code of a model, together with the data. Further down in `package.py`, we write this:
 
 ```python
 if __name__ == '__main__':
@@ -101,7 +101,7 @@ We get this output:
 {'decision': 'good', 'prediction': [1.9316778182983398, 1.865881085395813, 1.9164676666259766]}
 ```
 
-Now, in a new program, we can reload the model as follows. In `load.py`:
+Now, in a new program, we can try reloading the model as follows. In `load.py`:
 
 ```python
 import dill
@@ -109,12 +109,32 @@ import dill
 from torchapply import apply_model
 
 with open('model.dill', 'rb') as f:
-    c = dill.load(f, ignore=True)
+    c = dill.load(f)
 
 print(apply_model(c, 'lorem ipsum'))
 ```
 
-We get the same output, just as we wanted:
+I get now the following error:
+
+```
+Traceback (most recent call last):
+  File "/Users/dodo/blythed/blythed.github.io/code/2022-10-13-Packaging-Deep-Learning-Models-with-Dill/load.py", line 8, in <module>
+    print(apply_model(c, 'lorem ipsum'))
+  File "/Users/dodo/blythed/superduperdb/.venv/lib/python3.10/site-packages/torchapply/apply.py", line 93, in apply_model
+    prepared = model.preprocess(args)
+  File "/Users/dodo/blythed/blythed.github.io/code/2022-10-13-Packaging-Deep-Learning-Models-with-Dill/package.py", line 55, in preprocess
+    return torch.tensor(self.tokenizer(arg))
+NameError: name 'torch' is not defined
+```
+
+In order to fix this I needed to add an additional key word to the serialization code:
+
+```python
+with open('model.dill', 'wb') as f:
+    dill.dump(c, f, recurse=True)
+```
+
+Now, on loading, we get the same output, just as we wanted:
 
 ```
 {'decision': 'good', 'prediction': [1.9316778182983398, 1.865881085395813, 1.9164676666259766]}
@@ -142,28 +162,6 @@ with open('model.dill', 'rb') as f:
 print(apply_model(c, 'lorem ipsum'))
 ```
 
-Hoping to reload the model as in `pickle`, we instead get this error:
-
-```
-Traceback (most recent call last):
-  File "/Users/dodo/blythed/blythed.github.io/code/2022-10-13-Packaging-Deep-Learning-Models-with-Dill/load.py", line 6, in <module>
-    c = dill.load(f)
-  File "/Users/dodo/blythed/superduperdb/.venv/lib/python3.10/site-packages/dill/_dill.py", line 373, in load
-    return Unpickler(file, ignore=ignore, **kwds).load()
-  File "/Users/dodo/blythed/superduperdb/.venv/lib/python3.10/site-packages/dill/_dill.py", line 646, in load
-    obj = StockUnpickler.load(self)
-  File "/Users/dodo/blythed/superduperdb/.venv/lib/python3.10/site-packages/dill/_dill.py", line 636, in find_class
-    return StockUnpickler.find_class(self, module, name)
-AttributeError: Can't get attribute 'MyCompoundClass' on <module '__main__' from '/Users/dodo/blythed/blythed.github.io/code/2022-10-13-Packaging-Deep-Learning-Models-with-Dill/load.py'>
-```
-
-In order to make this work, we need to change the serialization code in this way:
-
-```python
-with open('model.dill', 'wb') as f:
-    dill.dump(c, f, byref=False)
-```
-
 After doing this, we get this output from `python save.py`:
 
 ```
@@ -188,7 +186,7 @@ c.eval()
 
 print(apply_model(c, 'lorem ipsum'))
 with open('model.dill', 'wb') as f:
-    dill.dump(c, f, byref=False)
+    dill.dump(c, f, recurse=True)
 
 ```
 
