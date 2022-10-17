@@ -12,4 +12,4 @@ c.eval()
 
 print(apply_model(c, 'lorem ipsum'))
 with open('model.dill', 'wb') as f:
-    dill.dump(c, f, byref=False, recurse=True)
+    dill.dump(c, f, recurse=True)

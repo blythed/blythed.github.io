@@ -56,7 +56,7 @@ class MyCompoundClass(torch.nn.Module):
 
     def forward(self, args):
         output = self.layer(args)[:, -1, :]
-        print('testing testing 123')
+        # print('testing testing 123')
         return self.function(output)
 
     def postprocess(self, x):
@@ -76,4 +76,4 @@ if __name__ == '__main__':
 
     print(apply_model(c, 'lorem ipsum'))
     with open('model.dill', 'wb') as f:
-        dill.dump(c, f, byref=False, recurse=True)
+        dill.dump(c, f, recurse=True)
