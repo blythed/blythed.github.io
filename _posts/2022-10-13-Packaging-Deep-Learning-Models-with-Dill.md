@@ -131,7 +131,7 @@ In order to fix this I needed to add an additional key word to the serialization
 
 ```python
 with open('model.dill', 'wb') as f:
-		dill.dump(c, f, recurse=True)
+    dill.dump(c, f, recurse=True)
 ```
 
 Now, on loading, we get the same output, just as we wanted:
