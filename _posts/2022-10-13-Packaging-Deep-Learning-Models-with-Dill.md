@@ -149,7 +149,7 @@ def forward(self, args):
     return self.function(output)
 ```
 
-We are hoping to have saved the source, code. Let's try reloading the model, as per the docs, like this:
+We are hoping to have saved the source code. Let's try reloading the model, as per the docs, like this:
 
 ```python
 import dill
