@@ -79,8 +79,7 @@ The final challenge is to find a way to save our objects in training to include 
 
 - Pickle
 - Dill
-- PADL
-- AI-json
+- AI-JSONable
 
 So stay tuned!
 
