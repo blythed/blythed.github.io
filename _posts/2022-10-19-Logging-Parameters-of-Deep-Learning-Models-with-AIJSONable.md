@@ -7,6 +7,8 @@ In the two previous posts ([here]({{ site.url }}/Packaging-Deep-Learning-Models-
 
 In this post, we review a method for tracking parameters. It's based on a package, `aijson` I wrote myself in Python. The package is less than 350 lines of Python code, and demonstrates how to separate saving model output, from tracking parameters. Interested parties are open to either collaborate on the project, or write their own code based on this simple concept.
 
+We install the package using `pip install ai-jsonable`.
+
 The basic idea here is to track the inputs to function signatures and class `__init__` methods, and to log all jsonable items. If an item is not jsonable, we chase down its initialization functions or methods, and do the same there and so forth.
 
 ## NLP example continued
@@ -104,6 +106,49 @@ with logging_context as lc:
 print(json.dumps(lc, indent=2))
 ```
 
+You'll see that the JSON output gives a recursive definition of the full model:
+
+```json
+{
+  "var0": {
+    "module": "mymodels",
+    "caller": "MyTokenizer",
+    "kwargs": {
+      "calibration_file": "corpus.txt",
+      "vocab_size": 100
+    }
+  },
+  "var1": {
+    "module": "mymodels",
+    "caller": "MyLayer",
+    "kwargs": {
+      "n_symbols": 100,
+      "n_classes": 3
+    }
+  },
+  "var2": {
+    "module": "mymodels",
+    "caller": "MyReader",
+    "kwargs": {
+      "d": [
+        "good",
+        "bad",
+        "ugly"
+      ]
+    }
+  },
+  "var3": {
+    "module": "mymodels",
+    "caller": "MyCompoundClass",
+    "kwargs": {
+      "tokenizer": "$var0",
+      "layer": "$var1",
+      "decoder": "$var2"
+    }
+  }
+}
+```
+
 If we want to reinstantiate the model based on the JSONable output, we can do that without recourse to the original Python build code. If needs be, parameters can be changed in-line by modifying `lc` directly.
 
 ```python
@@ -112,13 +157,12 @@ from aijson.build import build
 c = build(lc)
 ```
 
-This method can be combined with the merits of `pickle` or `dill` to get a nice experiment tracking, logging and serialization system. All parameters which do into building a model (including training code) can be logged with `aijson`. Inside the training loop, we can use `pickle` or `dill` to serialize the model to a data blob. If any doubts about parameter values arise, or these need to be accessed programmatically, these can be gleaned directly from the JSON output.
+This method can be combined with the merits of `pickle` or `dill` to get a nice experiment tracking, logging and serialization system. All parameters which go into building a model (including training code) can be logged with `aijson`. Inside the training loop, we can use `pickle` or `dill` to serialize the model to a data blob. If any doubts about parameter values arise, or these need to be accessed programmatically, these can be gleaned directly from the JSON output.
 
 ## Modular experimentation, including pre- and post-processing
 
-Using configuration files written in Python, which may be used to flexibly "wire" together models, we get a very flexible experimentation environment. There need be no pre-conceived notion of which pre-processor goes together with which forward pass and which post-processor. This logic may be carried over further to the inner mechanics of each of these components. When exporting the results of the experiment, the parameters are logged with `aijson` without needing to add building or cumbersome logging boilerplate to the code.
+Using `aijson` together with writing configuration files in Python, which may be used to flexibly "wire" together models, we get a very flexible experimentation environment. There need be no pre-conceived notion of which pre-processor goes together with which forward pass and which post-processor. This logic may be carried over further to the inner mechanics of each of these components. When exporting the results of the experiment, the parameters are logged with `aijson` without needing to add cumbersome building or logging boilerplate to the code.
 
 ## Next time...
 
 Next week I'll be looking at a different approach which replaces `pickle`, `dill` and `aijson`, and allows for very transparent model serialization and parameterisation. Stay tuned...
-
